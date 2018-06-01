@@ -1,0 +1,48 @@
+#!/bin/bash
+clear
+echo "tools ini menginstall yang dibutuhkan termux"
+echo "bagi pemula termux tools ini sangat dibutuhkan"
+echo "setelah selesai menginstall anda akan melanjutkan install tools-tools gabungan tetapi jika anda ingin tidak menginstall nya ada pilihannya kok:)"
+sleep 2
+echo "install yang dibutuhkan termux(ya)(no)"
+read -p "pilih huruf > " dt;
+if [ $dt == ya ] || [ $dt == y ]
+then
+pkg install update
+pkg install upgrade
+pkg install git
+pkg install python 
+pkg install python2
+pkg upgrade pip
+pkg upgrade pip2
+pip2 install requests
+pip2 install mechanize
+fi
+if [ $dt = no ] || [ $dt = n ]
+then
+echo "Keluar"
+sleep 1
+echo "ingin menginstall tools  "
+sleep 1
+fi
+echo "apakah anda ingin menginstall tools (mr.bajingan) atau (LITETOOLS) atau (no)"
+read -p "pilih huruf > " pp;
+if [ $pp == mr.bajingan ] || [ $pp == mr.bajingan ]
+then
+git clone https://github.com/DarknessCyberTeam/BAJINGANv6
+cd BAJINGANv6
+sh BAJINGAN.sh
+fi
+if [ $pp == LITETOOLS ] || [ $pp == LITETOOLS ]
+then
+git clone https://github.com/4L13199/LITETOOLS
+cd LITETOOLS
+sh LITETOOLS.isl
+fi
+if [ $pp = no ] || [ $pp = n ]
+then
+echo "Keluar"
+echo "sampai jumpa"
+sleep 2
+echo "jangan rindu ya tod"
+fi
